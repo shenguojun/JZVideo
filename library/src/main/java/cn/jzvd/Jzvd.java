@@ -938,8 +938,6 @@ public abstract class Jzvd extends FrameLayout implements View.OnClickListener, 
             vpup.requestDisallowInterceptTouchEvent(false);
             vpup = vpup.getParent();
         }
-        if (state != STATE_PLAYING &&
-                state != STATE_PAUSE) return;
         long time = seekBar.getProgress() * getDuration() / 100;
         seekToManulPosition = seekBar.getProgress();
         mediaInterface.seekTo(time);
