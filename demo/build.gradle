@@ -16,14 +16,14 @@ android {
             abiFilters 'armeabi-v7a' //, 'arm64-v8a'//, "mips"  //,'armeabi''x86',, 'x86_64',
         }
     }
-    signingConfigs {
-        releaseConfig {
-            storeFile file("jzvd-keystore")
-            storePassword "123456"
-            keyAlias "key0"
-            keyPassword "123456"
-        }
-    }
+//    signingConfigs {
+//        releaseConfig {
+//            storeFile file("jzvd-keystore")
+//            storePassword "123456"
+//            keyAlias "key0"
+//            keyPassword "123456"
+//        }
+//    }
     buildTypes {
 //        debug {//测试时会用到
 //            minifyEnabled true
@@ -33,7 +33,7 @@ android {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.releaseConfig
+//            signingConfig signingConfigs.releaseConfig
         }
     }
     compileOptions {
